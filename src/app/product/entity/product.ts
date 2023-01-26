@@ -7,12 +7,12 @@ export class Product {
     public price: number,
     public amount: number
   ) {
-    if (!name || !description || !price || !amount) {
-      throw new ProductException('Missing product field');
-    }
-
     if (amount <= 0) {
       throw new ProductException('It is necessary at least one product amount');
+    }
+
+    if (!name || !description || !price || !amount) {
+      throw new ProductException('Missing product field');
     }
   }
 }
