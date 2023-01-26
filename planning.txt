@@ -1,0 +1,6 @@
+1. Entities
+  - Product
+  - Order
+  - Coupon
+  - User
+  - Stock
