@@ -4,3 +4,8 @@
   - Coupon
   - User
   - Stock
+
+2. Corrections
+  - Criar entity de coupon
+  - Criar entity de usuário e atrelar o cpf para ele. No order, pedir um usuário e não um cpf diretamente
+  - Validar o CPF deve ser no usuário
