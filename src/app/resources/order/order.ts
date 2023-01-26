@@ -1,21 +1,21 @@
+import { CpfValidator } from '../../helpers/cpf-validator';
 import { Product } from '../product/product';
+import { User } from '../user/user';
 import { OrderException } from './ errors/errors';
 
 export class Order {
   constructor(
-    public cpf: string,
+    public user: User,
     public products: Product[],
     public shipping: number,
     public taxes: number,
     public discount: number = 0
   ) {
-    if (!this.validateCpf()) {
-      throw new OrderException('Invalid CPF, please enter a valid one');
+    if (!CpfValidator.validate(user.cpf)) {
+      throw new OrderException(
+        'Can not create and order with a user with invalid cpf'
+      );
     }
-  }
-
-  validateCpf(): boolean {
-    return true;
   }
 
   addProduct(product: Product): Product[] {
