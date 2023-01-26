@@ -8,13 +8,13 @@ describe('Product Entity Test', () => {
     ).toThrowError('It is necessary at least one product amount');
   });
 
-  test('It must not create a Product blank name', () => {
+  test('It must not create a Product with blank name', () => {
     expect(() => new Product('', 'TKL RGB Keyboard', 239, 20)).toThrowError(
       'Missing product field'
     );
   });
 
-  test('It must not create a Product blank description', () => {
+  test('It must not create a Product with blank description', () => {
     expect(() => new Product('Keyboard', '', 239, 20)).toThrowError(
       'Missing product field'
     );
